@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>_DCSR_</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Arial', sans-serif;
+        }
+
+        /* Fondo de pantalla sin repetición y con tamaño contenido */
+        body {
+            background: url('img/amar2.jpg') no-repeat center center;
+            background-size: cover;
+            position: relative;
+        }
+
+        /* Capa de transparencia */
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+            z-index: 1;
+        }
+
+        /* Contenedor centrado */
+        .content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            color: white;
+            padding: 0 20px; /* Añadido para evitar que el contenido se pegue a los bordes en pantallas pequeñas */
+        }
+
+        h1, h2 {
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+        }
+
+        h1 {
+            font-size: 8vw;
+            animation: fadeInOut 3s infinite;
+        }
+
+        h2 {
+            font-size: 4vw;
+            margin-top: 20px;
+            animation: pulse 2s infinite;
+        }
+
+        button {
+            font-size: 3vw;
+            padding: 15px 30px;
+            margin-top: 30px;
+            border: none;
+            background-color: #6a0dad;
+            color: white;
+            cursor: pointer;
+            border-radius: 50px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.4);
+        }
+
+        @keyframes fadeInOut {
+            0%, 100% {
+                opacity: 0.8;
+            }
+            50% {
+                opacity: 1;
+            }
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+        }
+
+        /* Media Queries para adaptar el diseño en diferentes pantallas */
+
+        /* Para pantallas pequeñas (móviles en vertical) */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 10vw;
+            }
+
+            h2 {
+                font-size: 6vw;
+            }
+
+            button {
+                font-size: 5vw;
+                padding: 10px 20px;
+            }
+        }
+
+        /* Para pantallas muy pequeñas (móviles en horizontal) */
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 12vw;
+            }
+
+            h2 {
+                font-size: 8vw;
+            }
+
+            button {
+                font-size: 6vw;
+                padding: 8px 16px;
+            }
+        }
+
+        /* Para pantallas grandes (escritorios grandes) */
+        @media (min-width: 1200px) {
+            h1 {
+                font-size: 6vw;
+            }
+
+            h2 {
+                font-size: 3vw;
+            }
+
+            button {
+                font-size: 2.5vw;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Capa de transparencia -->
+    <div class="overlay"></div>
+    
+    <!-- Contenido centrado -->
+    <div class="content">
+        <h1>MI MAPACHITO 🦝</h1>
+        <h2>Para ti 🌻</h2>
+        <button onclick="window.location.href='rosas.html'">Ver💛</button>
+    </div>
+</body>
+</html>
